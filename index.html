@@ -16,9 +16,7 @@
       --accent: #d3ff35;
       --border: #303329;
     }
-
     * { box-sizing: border-box; }
-
     body {
       min-height: 100vh;
       margin: 0;
@@ -30,7 +28,6 @@
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       line-height: 1.6;
     }
-
     main {
       width: min(100%, 620px);
       padding: clamp(28px, 7vw, 56px);
@@ -39,7 +36,6 @@
       background: color-mix(in srgb, var(--surface) 94%, transparent);
       box-shadow: 0 24px 80px #0008;
     }
-
     .brand {
       margin: 0 0 42px;
       color: var(--accent);
@@ -48,27 +44,19 @@
       letter-spacing: .2em;
       text-transform: uppercase;
     }
-
     h1 {
       margin: 0;
       font-size: clamp(36px, 8vw, 54px);
       line-height: 1.08;
       letter-spacing: -.04em;
     }
-
-    .intro {
-      margin: 18px 0 30px;
-      color: var(--muted);
-      font-size: 17px;
-    }
-
+    .intro { margin: 18px 0 30px; color: var(--muted); font-size: 17px; }
     .contact-card {
       padding: 22px;
       border: 1px solid var(--border);
       border-radius: 18px;
       background: #0d0e0b;
     }
-
     .label {
       display: block;
       margin-bottom: 8px;
@@ -78,7 +66,6 @@
       letter-spacing: .08em;
       text-transform: uppercase;
     }
-
     .email {
       color: var(--accent);
       font-size: clamp(17px, 4vw, 21px);
@@ -87,7 +74,6 @@
       text-decoration-thickness: 1px;
       text-underline-offset: 4px;
     }
-
     .button {
       display: inline-flex;
       min-height: 48px;
@@ -101,12 +87,10 @@
       font-weight: 800;
       text-decoration: none;
     }
-
-    .button:focus-visible, .email:focus-visible {
+    .button:focus-visible, .email:focus-visible, .legal-links a:focus-visible {
       outline: 3px solid #fff;
       outline-offset: 4px;
     }
-
     .help {
       margin-top: 34px;
       padding-top: 24px;
@@ -114,14 +98,22 @@
       color: var(--muted);
       font-size: 14px;
     }
-
     .help strong { color: var(--text); }
-
-    footer {
-      margin-top: 32px;
-      color: #777a70;
-      font-size: 12px;
+    .legal-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 22px;
+      margin-top: 28px;
     }
+    .legal-links a {
+      color: var(--muted);
+      font-size: 13px;
+      text-decoration: underline;
+      text-decoration-color: #6f7461;
+      text-underline-offset: 4px;
+    }
+    .legal-links a:hover { color: var(--accent); }
+    footer { margin-top: 32px; color: #777a70; font-size: 12px; }
   </style>
 </head>
 <body>
@@ -140,6 +132,11 @@
     <section class="help" aria-label="Helpful details">
       <strong>To help us resolve your issue faster</strong>, include your device model, iOS version, and a short description of what happened. Please don’t include passwords or other sensitive information.
     </section>
+
+    <nav class="legal-links" aria-label="Legal documents">
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="terms-of-use.html">Terms of Use</a>
+    </nav>
 
     <footer>© <span id="year"></span> AuraStudio</footer>
   </main>
